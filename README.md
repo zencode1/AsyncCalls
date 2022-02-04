@@ -1,16 +1,16 @@
 # AsyncCalls - Delphi asynchronous function call framework
 
 With AsyncCalls you can execute multiple functions at the same time and synchronize them
-with an **IAsyncCall** interface. This allows you to execute time consuming code in a
-different thread whos result is needed at a later time.
+with an **IAsyncCall** interface. This allows you to execute time-consuming code in a
+different thread whose result is needed at a later time.
 
 The **AsyncCalls.pas** unit offers a variety of function prototypes to call asynchronous
 functions.
 
-Inlined VCL/main thread synchronization is supported. With this you can implement the code that
+Inlined VCL/main thread synchronization is supported. With this, you can implement the code that
 calls a VCL function directly in your thread method without having to use a helper method and
 TThread.Synchronize. You have full access to all local variables.
-For Delphi 2009 and newer the TAsyncCalls class utilizes generics and anonymous methods.
+For Delphi 2009 and newer, the TAsyncCalls class utilizes generics and anonymous methods.
 
 ## Documentation
 
