@@ -496,7 +496,7 @@ type
     FFatalException: Exception;
     FFatalErrorAddr: Pointer;
 
-    FRefCount: Integer;    
+    FRefCount: Integer;
     FReturnValue: Integer;
     FForceDifferentThread: Boolean;
     FCancelInvocation: Boolean;

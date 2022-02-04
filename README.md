@@ -32,27 +32,27 @@ Add the **AsyncCalls.pas** unit to your project's **uses**-clause.
 
 ### Using an anonymous function
 ```delphi
-procedure TForm1.Button3Click(Sender: TObject); 
-var 
-  Value: Integer; 
-begin 
-  TAsyncCalls.Invoke(procedure 
-  begin 
+procedure TForm1.Button3Click(Sender: TObject);
+var
+  Value: Integer;
+begin
+  TAsyncCalls.Invoke(procedure
+  begin
     // Executed in a thread
-    Value := 10; 
-    TAsyncCalls.VCLInvoke(procedure 
-    begin 
-      ShowMessage('The value may not equal 10: ' + IntToStr(Value)); 
-    end); 
-    Value := 20; 
-    TAsyncCalls.VCLSync(procedure 
-    begin 
-      ShowMessage('The value equals 20: ' + IntToStr(Value)); 
-    end); 
-    Value := 30; 
-  end); 
+    Value := 10;
+    TAsyncCalls.VCLInvoke(procedure
+    begin
+      ShowMessage('The value may not equal 10: ' + IntToStr(Value));
+    end);
+    Value := 20;
+    TAsyncCalls.VCLSync(procedure
+    begin
+      ShowMessage('The value equals 20: ' + IntToStr(Value));
+    end);
+    Value := 30;
+  end);
 
-  Sleep(1000); 
+  Sleep(1000);
 end; // If the async. function is run yet, the "end" will sync it
 ```
 
@@ -79,7 +79,7 @@ begin
   Result := 0;
 end;
 
-procedure TFormMain.ButtonGetFilesClick(Sender: TObject); 
+procedure TFormMain.ButtonGetFilesClick(Sender: TObject);
 var
   Dir1, Dir2, Dir3: IAsyncCall;
   Dir1Files, Dir2Files, Dir3Files: TStrings;
